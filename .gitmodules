@@ -1,0 +1,6 @@
+[submodule "MLEM"]
+	path = MLEM
+	url = https://github.com/Ellpeck/MLEM
+[submodule "Coroutine"]
+	path = Coroutine
+	url = https://github.com/Ellpeck/Coroutine

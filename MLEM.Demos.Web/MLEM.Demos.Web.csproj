@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net472</TargetFramework>
+        <DefineConstants>WEB</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="..\MLEM\Demos\**\*.cs">
+            <Link>Demos\%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </Compile>
+        <Compile Include="..\MLEM\MLEM\**\*.cs">
+            <Link>MLEM\%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </Compile>
+        <Compile Include="..\MLEM\MLEM.Ui\**\*.cs">
+            <Link>MLEM.Ui\%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </Compile>
+        <Compile Include="..\MLEM\MLEM.Startup\**\*.cs">
+            <Link>MLEM.Startup\%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </Compile>
+        <Compile Include="..\Coroutine\Coroutine\**\*.cs">
+            <Link>Coroutine\%(RecursiveDir)%(Filename)%(Extension)</Link>
+        </Compile>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="MonoGame.Content.Builder" Version="3.7.0.9" />
+        <PackageReference Include="MonoGame.Framework.Bridge" Version="3.7.0.2" />
+        <PackageReference Include="Retyped.dom" Version="2.8.6733" />
+        <PackageReference Include="Bridge" Version="17.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <MonoGameContentReference Include="..\MLEM\Demos\Content\Content.mgcb" />
+        <Content Include="..\MLEM\Demos\Content\*\**" />
+    </ItemGroup>
+</Project>
